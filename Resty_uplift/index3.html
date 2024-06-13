@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uplift Index</title>
+    <link rel="stylesheet" href="css/bootstrap-5.3.3-dist/css/bootstrap.css"/>
+    <style>
+        .search_button {
+            background-color: orange;
+            border: 0px;
+            height: 24px;
+            font-size: 1rem;
+        }
+        .search_button:hover {
+            background-color: #ffe4b2;;
+            cursor: pointer;
+        }
+       
+        .search_form {
+            justify-content: end;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content li {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #000435;
+        }
+        .dropdown-content li:hover {
+            
+            color: orangered;
+        }
+        
+        .logo{width: 22%;}
+        .logo-container {
+             text-align: center;
+        }
+
+      
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('b.jpeg'); /* Replace 'your-image.jpg' with your image file path */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+        }
+
+        .contribution_button {
+            background-image: linear-gradient(to right,darkgreen, #32CD32, #7CFC00, lightgreen); /* Gradient from lime green to chartreuse */
+            color: white;
+            border: 0px;
+            padding: 0px 10px 0px 10px;
+
+        }
+
+        .contribution_button:hover {border: 2px solid;
+            border-image: linear-gradient(to right, green 50%, orange 50%);
+            border-image-slice: 1;}
+        .assistance_button {
+            padding: 0px 10px;  
+            border-radius: 5px;
+            border: 2px solid;
+            border-image: linear-gradient(to right, green 50%, orange 50%);
+            border-image-slice: 1;
+        }
+        .assistance_button:hover {
+            background-color: lightgreen; /* Change border color on hover */
+        }
+
+        @media (max-width: 600px) {
+            .search_form {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <nav style="background-color:lightgreen; padding:10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <p style="color:white;">UPLIFT</p>
+       <b>
+        <ul style="color:darkgreen; text-decoration:none; list-style-type:none; display: inline-block; margin: 0; padding: 0;">
+            <li class="nav-item" style="display: inline-block; margin-right: 10px;"> <a class="nav-link" href="friends.html" target="_parent">Friends in need</a> </li>
+            <li class="nav-item" style="display: inline-block; margin-right: 10px;"> <a class="nav-link" href="friends.html" target="_parent">Contributors</a> </li>
+            <li class="nav-item" style="display: inline-block; margin-right: 10px;"> <a class="nav-link" href="friends.html" target="_parent">Status</a> </li>
+            <li class="dropdown" style="display: inline-block; margin-right: 10px;">
+                <span>How it works</span>
+                <ul class="dropdown-content">
+                    <li>About</li>
+                    <li>Success stories</li>
+                    <li>Major Donors</li>
+                </ul>
+            </li>
+        </ul>
+       </b> 
+        <form action="POST" class="search_form" style="display: flex; align-items: center; margin-top: 10px;">
+            <input placeholder="search" style="height:24px;font-size:1rem; margin-right: 10px;">
+            <button class="search_button">Search</button>
+        </form>
+    </nav>
+     
+    <div class="logo-container">
+        <img class="logo" src="upliftt(3)copy.png" alt="">
+        <p style="color:#000435; font-size: 25px;"> <b><i>Making Hope Tangible</i></b> </p>
+    </div>
+    <div style="text-align: center;">
+        <p><b>Wish to share?</b></p>
+        <button class="contribution_button"><b>CONTRIBUTE</b> <img style="width:40px; margin:5px; padding: 5px ;  "src="circle_14026245.png" alt=""></button><br><br>
+        <p><b>Seeking Assistance?</b></p>
+       
+        <button class="assistance_button"><b>ASSISTANCE</b> <img style="width:40px; margin:5px; padding: 5px ;  "src="plantation_6089848.png" alt=""></button>
+    </div><br>
+    
+    <div style="text-align: center;">
+        <p><b>Do you have an item uploaded already? Track the progress</b></p>
+        <form class="track_form"action="POST">
+          <input style="border-color: orange;" placeholder="Username" >
+          <input style="border-color: orange;" placeholder="Code">
+          <button class="search_button" type="submit">Submit</button>
+        </form>
+    </div>
+    
+    
+
+</body>
+</html>
